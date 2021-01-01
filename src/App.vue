@@ -61,7 +61,11 @@ export default {
           "/dict/?api=1" +
           "&dict=広辞苑_日本大百科_マグローヒル科学技術用語大辞典&type=0&q=" +
           value,
-        origin: "https://sakura-paris.org",
+        origin: "https://hikokata.github.io",
+        headers: {
+          //Origin: "https://hikokata.github.io",
+          "Access-Control-Allow-Origin": "https://hikokata.github.io"
+        },
         timeout: 1000 // ms
       })
         /*
