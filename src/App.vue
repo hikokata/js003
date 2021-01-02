@@ -54,7 +54,17 @@ export default {
     },
     botSubmit(value) {
       let _this = this;
-
+      const params = new URLSearchParams();
+      params.append("api", 1);
+      params.append("dict", "広辞苑_日本大百科_マグローヒル科学技術用語大辞典");
+      params.append("type", 0);
+      params.append("q", value);
+      axios
+        .get("https://sakura-paris.org/dict/", {
+          params: params,
+          timeout: 1000
+        })
+        /*
       axios({
         method: "GET",
         url:
@@ -65,6 +75,7 @@ export default {
         //origin: "https://hikokata.github.io",
         timeout: 1000 // ms
       })
+      */
         /*
       fetch(
         "https://sakura-paris.org" +
